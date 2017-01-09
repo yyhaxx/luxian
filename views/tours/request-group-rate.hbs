@@ -1,0 +1,13 @@
+<h1>参团旅游</h1>
+<form action="">
+	<input type="hidden" name="referrer">
+	姓名： <input type="text" id="fieldName" name="name"><br>
+	人数：<input type="text" name="groupSize"><br>
+	电子邮箱：<input type="email" name="email"><br>
+	<input type="submit" value="提交">
+</form>
+<script>
+	$(function () {
+		$('input[name="referrer"]').val(document.referrer);
+	})
+</script>

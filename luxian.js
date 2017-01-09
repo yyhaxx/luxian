@@ -15,6 +15,11 @@ app.set('port', process.env.PORT || 3000);
 
 app.use(express.static(__dirname + '/public'));
 
+app.use(function (req, res, next) {
+	res.locals.showTests = app.get('env') !== 'production' && req.query.test === '1';
+	next();
+})
+
 // 路由
 app.get('/', function (req, res) {
 	res.render('home');
@@ -23,7 +28,16 @@ app.get('/', function (req, res) {
 app.get('/about', function (req, res) {
 	res.render('about', {
 		fortune: fortune.getFortune,
+		pageTestScript: '/qa/tests-about.js',
 	});
+});
+
+app.get('/tours/jiuqu-river', function (req, res) {
+	res.render('tours/jiuqu-river');
+});
+
+app.get('/tours/request-group-rate', function (req, res) {
+	res.render('tours/request-group-rate');
 });
 
 // 定制404页面
