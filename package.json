@@ -1,0 +1,26 @@
+{
+  "name": "luxian",
+  "version": "1.0.0",
+  "description": "luxian",
+  "main": "luxian.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yyhaxx/luxian.git"
+  },
+  "keywords": [
+    "luxian"
+  ],
+  "author": "yyhaxx@163.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yyhaxx/luxian/issues"
+  },
+  "homepage": "https://github.com/yyhaxx/luxian#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0"
+  }
+}
