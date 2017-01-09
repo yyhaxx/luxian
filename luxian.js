@@ -1,4 +1,5 @@
 var express = require('express');
+var fortune = require('./lib/fortune.js')
 
 var app = new express();
 
@@ -20,9 +21,8 @@ app.get('/', function (req, res) {
 });
 
 app.get('/about', function (req, res) {
-	var randomFoutune = fortunes[Math.floor(Math.random() * fortunes.length)]
 	res.render('about', {
-		fortune: randomFoutune,
+		fortune: fortune.getFortune,
 	});
 });
 
@@ -43,9 +43,3 @@ app.listen(app.get('port'), function () {
 	console.log('this app start at ' + app.get('port'));
 });
 
-var fortunes = [
-	'人定胜天',
-	'站在巨人的肩膀上',
-	'无知者无畏',
-	'范进中举',
-]
