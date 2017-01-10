@@ -3,16 +3,20 @@
 <head>
 	<meta charset="UTF-8">
 	<title>泸县</title>
+	<link rel="stylesheet" href="/css/main.css">
 	{{#if showTests}}
 		<link rel="stylesheet" href="/vendor/mocha.css">
 	{{/if}}
 	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
 <body>
-	<header>
-		<img src="/imgs/luxian.png" alt="泸县">
-	</header>
-	{{{body}}}
+	<div class="container">
+		<header>
+			<img src="/imgs/luxian.png" alt="泸县">
+		</header>
+		{{{body}}}
+		<footer>&copy;{{copyrightYear}} 宋韵龙城</footer>
+	</div>
 	{{#if showTests}}
 		<div id="mocha"></div>
 		<script src="/vendor/mocha.js"></script>
